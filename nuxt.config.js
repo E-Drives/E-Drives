@@ -1,5 +1,3 @@
-import colors from "vuetify/es5/util/colors";
-
 export default {
   mode: "spa",
   /*
@@ -46,16 +44,15 @@ export default {
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
-      dark: true,
       themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+        light: {
+          primary: "#95C93D",
+          accent: "#227D7A",
+          secondary: "#009444",
+          info: "#F0CA51",
+          warning: "#ffbf00",
+          error: "#FD4A4A",
+          success: "#7CFC00"
         }
       }
     },
