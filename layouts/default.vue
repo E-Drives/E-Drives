@@ -9,9 +9,7 @@
       <v-app-bar-nav-icon class="hidden-md-and-up" color="white" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
     <v-navigation-drawer right temporary fixed v-model="drawer">
       <v-list>

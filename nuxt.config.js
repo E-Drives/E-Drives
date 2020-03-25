@@ -20,7 +20,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: { color: "#f00" },
   /*
    ** Global CSS
    */
@@ -28,7 +28,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/vue-videobg"],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
