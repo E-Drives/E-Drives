@@ -1,19 +1,5 @@
 <template>
   <v-app dark>
-    <v-app-bar color="secondary" fixed app>
-      <v-toolbar-title></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn
-          v-for="item in menu"
-          :key="item.icon"
-          text
-          color="white"
-          :href="item.to"
-        >{{ item.title }}</v-btn>
-      </v-toolbar-items>
-      <v-app-bar-nav-icon class="hidden-md-and-up" color="white" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-    </v-app-bar>
     <v-content>
       <nuxt />
     </v-content>
@@ -29,9 +15,18 @@
 
 <script>
 export default {
+  computed: {
+    drawer: {
+        get() {
+          return this.$store.state.drawer
+        },
+        set(val) {
+          this.$store.commit('drawer', val)
+        }
+      },
+  },
   data() {
     return {
-      drawer: false,
       menu: [
         { icon: "Home", title: "Home" },
         { icon: "Section 1", title: "Section 1", to: "#whyedrive" },
@@ -39,6 +34,6 @@ export default {
         { icon: "Section 3", title: "Section 3" }
       ]
     };
-  },
+  }
 };
 </script>
