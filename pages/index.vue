@@ -1,5 +1,8 @@
 <template>
-  <EdriveVideo></EdriveVideo>
+  <div>
+    <WhyEdrive></WhyEdrive>
+    <EdriveVideo></EdriveVideo>
+  </div>
 </template>
 
 <style scoped>
@@ -7,8 +10,11 @@
 
 <script>
 import EdriveVideo from "~/components/edrive-video";
+import WhyEdrive from "~/components/why-edrive";
+
 export default {
   components: {
+    WhyEdrive,
     EdriveVideo
   }
 };

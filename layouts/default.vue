@@ -4,7 +4,13 @@
       <v-toolbar-title></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn v-for="item in menu" :key="item.icon" text color="white">{{ item.title }}</v-btn>
+        <v-btn
+          v-for="item in menu"
+          :key="item.icon"
+          text
+          color="white"
+          :href="item.to"
+        >{{ item.title }}</v-btn>
       </v-toolbar-items>
       <v-app-bar-nav-icon class="hidden-md-and-up" color="white" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
@@ -28,11 +34,11 @@ export default {
       drawer: false,
       menu: [
         { icon: "Home", title: "Home" },
-        { icon: "Section 1", title: "Section 1" },
+        { icon: "Section 1", title: "Section 1", to: "#whyedrive" },
         { icon: "Section 2", title: "Section 2" },
         { icon: "Section 3", title: "Section 3" }
       ]
     };
-  }
+  },
 };
 </script>
