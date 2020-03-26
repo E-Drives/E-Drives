@@ -1,8 +1,11 @@
 <template>
   <div>
     <AppBar></AppBar>
+    <EdriveIntro></EdriveIntro>
     <WhyEdrive></WhyEdrive>
     <EdriveVideo></EdriveVideo>
+    <EdriveTestimonial></EdriveTestimonial>
+    <EdriveFooter></EdriveFooter>
   </div>
 </template>
 
@@ -10,15 +13,21 @@
 </style>
 
 <script>
-import AppBar from "~/components/appbar";
-import EdriveVideo from "~/components/edrive-video";
-import WhyEdrive from "~/components/why-edrive";
+import AppBar from "~/components/home/appbar";
+import EdriveIntro from "~/components/home/edrive-intro";
+import WhyEdrive from "~/components/home/why-edrive";
+import EdriveVideo from "~/components/home/edrive-video";
+import EdriveTestimonial from "~/components/home/edrive-testimonial";
+import EdriveFooter from "~/components/home/edrive-footer";
 
 export default {
   components: {
     AppBar,
+    EdriveIntro,
     WhyEdrive,
-    EdriveVideo
+    EdriveVideo,
+    EdriveTestimonial,
+    EdriveFooter
   }
 };
 </script>

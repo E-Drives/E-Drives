@@ -1,7 +1,15 @@
 <template>
-  <div>About</div>
+  <div>
+    <TabBar></TabBar>
+  </div>
 </template>
 
 <script>
-export default {};
+import TabBar from "~/components/about/tabbar";
+
+export default {
+  components: {
+    TabBar
+  }
+};
 </script>
