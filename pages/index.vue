@@ -3,6 +3,7 @@
     <AppBar></AppBar>
     <EdriveIntro></EdriveIntro>
     <WhyEdrive></WhyEdrive>
+    <!-- // TODO How Edrive Component Waiting for app screenshots -->
     <EdriveVideo></EdriveVideo>
     <EdriveTestimonial></EdriveTestimonial>
     <EdriveFooter></EdriveFooter>

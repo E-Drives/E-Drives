@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  // TODO Update the section names on confirming them 
   data() {
     return {
       drawer: false,

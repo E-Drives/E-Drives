@@ -1,6 +1,7 @@
 <template>
   <div>
     <TabBar></TabBar>
+    <!-- // TODO Update the tab bar with each pages content -->
   </div>
 </template>
 

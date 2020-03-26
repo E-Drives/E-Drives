@@ -18,7 +18,9 @@
           <v-container fluid>
             <p>Download</p>
           </v-container>
-          <v-container fluid></v-container>
+          <v-container fluid>
+            <!-- // TODO add google play download button and link -->
+          </v-container>
         </v-col>
       </v-row>
     </v-container>
