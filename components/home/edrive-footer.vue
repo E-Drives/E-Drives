@@ -24,7 +24,6 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-divider></v-divider>
     <v-row>
       <v-col cols="3" v-for="item in items" :key="item.title">
         <v-card flat color="primary">
