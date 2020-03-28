@@ -8,7 +8,7 @@
       </v-row>
     </v-container>
     <v-row align="start" justify="space-around">
-      <v-col cols="10" sm="6" md="4" xl="2" v-for="item in items" :key="item.title">
+      <v-col cols="8" sm="4" md="2" v-for="item in items" :key="item.title">
         <v-card>
           <v-container>
             <v-img :src="getImage(item.src)"></v-img>
@@ -36,7 +36,7 @@ export default {
   data: () => ({
     items: [
       {
-        src: "why_edrive_1.png",
+        src: "why_edrive_4.png",
         title: "Easy to book",
         text: "Book with just few taps of your phone with seamless payment."
       },
