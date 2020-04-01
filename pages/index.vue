@@ -1,9 +1,9 @@
 <template>
   <div>
-    <AppBar></AppBar>
+    <!-- <AppBar></AppBar> -->
     <EdriveIntro></EdriveIntro>
     <WhyEdrive></WhyEdrive>
-    <!-- // TODO How Edrive Component Waiting for app screenshots -->
+    <HowEdrive></HowEdrive>
     <EdriveVideo></EdriveVideo>
     <EdriveTestimonial></EdriveTestimonial>
     <EdriveFooter></EdriveFooter>
@@ -14,18 +14,19 @@
 </style>
 
 <script>
-import AppBar from "~/components/home/appbar";
+// import AppBar from "~/components/home/appbar";
 import EdriveIntro from "~/components/home/edrive-intro";
 import WhyEdrive from "~/components/home/why-edrive";
+import HowEdrive from "~/components/home/how-edrive";
 import EdriveVideo from "~/components/home/edrive-video";
 import EdriveTestimonial from "~/components/home/edrive-testimonial";
 import EdriveFooter from "~/components/home/edrive-footer";
 
 export default {
   components: {
-    AppBar,
     EdriveIntro,
     WhyEdrive,
+    HowEdrive,
     EdriveVideo,
     EdriveTestimonial,
     EdriveFooter

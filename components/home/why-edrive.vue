@@ -3,13 +3,13 @@
     <v-container fluid>
       <v-row>
         <v-col>
-          <p class="display-1">Why EDrive</p>
+          <span class="display-1 sec-head white--text">Why eDrive</span>
         </v-col>
       </v-row>
     </v-container>
     <v-row align="start" justify="space-around">
       <v-col cols="8" sm="4" md="2" v-for="item in items" :key="item.title">
-        <v-card>
+        <v-card flat>
           <v-container>
             <v-img :src="getImage(item.src)"></v-img>
           </v-container>
@@ -26,6 +26,12 @@
 .v-card__title {
   word-break: normal;
 }
+
+.sec-head {
+  background-color: #95c93d;
+  padding: 10px;
+  border-radius: 12px;
+}
 </style>
 
 <script>
@@ -36,7 +42,7 @@ export default {
   data: () => ({
     items: [
       {
-        src: "why_edrive_4.png",
+        src: "why_edrive_1.png",
         title: "Easy to book",
         text: "Book with just few taps of your phone with seamless payment."
       },
@@ -57,8 +63,7 @@ export default {
           "Bicycle architure allows fantastic maneuverability in jam packed traffic."
       },
       {
-        // TODO Change to Image 5 once given
-        src: "why_edrive_4.png",
+        src: "why_edrive_5.png",
         title: "All Electric",
         text: "Moving towards sustainable and greener future."
       }
@@ -66,7 +71,7 @@ export default {
   }),
   methods: {
     getImage(value) {
-      return require(`@/assets/${value}`);
+      return require(`@/assets/why_edrive/${value}`);
     }
   }
 };

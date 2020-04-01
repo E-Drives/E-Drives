@@ -1,7 +1,7 @@
 <template>
   <section>
     <video controls>
-      <source src="~/assets/edrive_video.mp4" type="video/mp4" />
+      <source src="~/assets/edrive_video/edrive_video.mp4" type="video/mp4" />
     </video>
   </section>
 </template>
