@@ -17,21 +17,21 @@
 export default {
   computed: {
     drawer: {
-        get() {
-          return this.$store.state.drawer
-        },
-        set(val) {
-          this.$store.commit('drawer', val)
-        }
+      get() {
+        return this.$store.state.drawer;
       },
+      set(val) {
+        this.$store.commit("drawer", val);
+      }
+    }
   },
   data() {
     return {
       menu: [
-        { icon: "Home", title: "Home" },
-        { icon: "Section 1", title: "Section 1", to: "#whyedrive" },
-        { icon: "Section 2", title: "Section 2" },
-        { icon: "Section 3", title: "Section 3" }
+        { icon: "Home", title: "Home", to: "#intro" },
+        { icon: "Why E Drives", title: "Why E Drives", to: "#whyedrives" },
+        { icon: "How Edrives", title: "How Edrives", to: "#howedrives" },
+        { icon: "Contact Us", title: "Contact Us", to: "#contactus" }
       ]
     };
   }
