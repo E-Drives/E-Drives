@@ -1,7 +1,7 @@
 <template>
   <v-app-bar color="secondary" fixed app>
     <v-toolbar-title>
-      <v-img :src="require('@/assets/nav_logo.png')" width="45" height="45" contain></v-img>
+      <v-img :src="require('@/assets/logo/edrive_logo.png')" width="45" height="45" contain></v-img>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
@@ -25,15 +25,15 @@
 
 <script>
 export default {
-  // TODO Update the section names on confirming them 
+  // TODO Update the section names on confirming them
   data() {
     return {
       drawer: false,
       menu: [
-        { icon: "Home", title: "Home" },
-        { icon: "Section 1", title: "Section 1", to: "#whyedrive" },
-        { icon: "Section 2", title: "Section 2" },
-        { icon: "Section 3", title: "Section 3" }
+        { icon: "Home", title: "Home", to: "#intro" },
+        { icon: "Why E Drives", title: "Why E Drives", to: "#whyedrives" },
+        { icon: "How Edrives", title: "How Edrives", to: "#howedrives" },
+        { icon: "Contact Us", title: "Contact Us", to: "#contactus" }
       ]
     };
   },

@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="primary">
+  <v-footer color="primary" id="contactus">
     <v-container fluid>
       <v-row>
         <v-col cols="6">
@@ -22,11 +22,16 @@
           </v-container>
         </v-col>
         <v-col cols="6">
-          <v-container fluid>
-            <p>Download</p>
-          </v-container>
-          <v-container fluid>
-            <!-- // TODO add google play download button and link -->
+          <v-container>
+            <v-row class="white--text title" justify="center">Contact</v-row>
+            <v-row justify="center">
+              Email:-
+              <a href="mailto:suraj@ecodrives.in" class="white--text">suraj@ecodrives.in</a>
+            </v-row>
+            <v-row justify="center">
+              Phone No:-
+              <a href="tel:8867208322" class="white--text">8867208322</a>
+            </v-row>
           </v-container>
         </v-col>
       </v-row>
@@ -95,7 +100,7 @@ export default {
         name: "LinkedIn",
         src: "linkedin-brands.svg",
         class: "img-linkedin",
-        link: "linkedin.com/company/eco-drives"
+        link: "https://linkedin.com/company/eco-drives"
       },
       {
         name: "Facebook",

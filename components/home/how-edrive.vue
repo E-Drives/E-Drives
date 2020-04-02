@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid>
+  <v-container fluid id="howedrives">
     <v-container fluid>
       <v-row>
         <v-col>
-          <span class="display-1 sec-head white--text">How eDrive</span>
+          <span class="display-1 sec-head white--text">How E Drives</span>
         </v-col>
       </v-row>
     </v-container>
@@ -13,7 +13,7 @@
           <img
             class="img-responsive"
             :src="require('@/assets/how_edrive/how_edrive.png')"
-            alt="How Edrive"
+            alt="How E Drives"
           />
         </v-row>
       </v-col>
@@ -58,7 +58,7 @@ export default {
   data: () => ({
     items: [
       {
-        title: "Download the E drives App.",
+        title: "Download the E Drives App.",
         text: "Download the app from Google play."
       },
       {
@@ -69,7 +69,7 @@ export default {
       {
         title: "Ride safely:",
         text:
-          "Enjoy E drives ride, but remember to abide by all the traffic laws and parking policies."
+          "Enjoy E Drives ride, but remember to abide by all the traffic laws and parking policies."
       },
       {
         title: "End your Ride:",

@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid id="whyedrive">
+  <v-container fluid id="whyedrives">
     <v-container fluid>
       <v-row>
         <v-col>
-          <span class="display-1 sec-head white--text">Why eDrive</span>
+          <span class="display-1 sec-head white--text">Why E Drives</span>
         </v-col>
       </v-row>
     </v-container>

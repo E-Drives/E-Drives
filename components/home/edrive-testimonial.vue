@@ -26,7 +26,9 @@
                 <v-row justify="center" align="center">
                   <div
                     :class="{'title': $vuetify.breakpoint.smAndUp, 'text-body': $vuetify.breakpoint.xs}"
-                  >{{ slide.text }}</div>
+                  >
+                    <span class="text-center">{{ slide.text }}</span>
+                  </div>
                 </v-row>
               </v-col>
             </v-row>
@@ -50,7 +52,7 @@
 }
 
 .text-body {
-  width: 200px;
+  width: 225px;
 }
 </style>
 
