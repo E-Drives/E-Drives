@@ -1,36 +1,38 @@
 <template>
-  <v-footer color="primary" id="contactus">
+  <v-footer color="secondary" id="contactus">
     <v-container fluid>
       <v-row>
         <v-col cols="6">
-          <v-container fluid>
-            <p>Connect Via</p>
-          </v-container>
-          <v-container fluid>
+          <v-card flat color="secondary">
+            <v-card-title class="justify-center white--text title">Connect Via</v-card-title>
             <v-row>
               <v-col v-for="icon in icons" :key="icon.name">
                 <v-row>
                   <v-spacer></v-spacer>
                   <v-btn text :href="icon.link" target="_blank">
                     <img :src="getImage(icon.src)" width="24" height="24" :class="icon.class" />
-                    <p class="hidden-sm-and-down icon-text">{{ icon.name }}</p>
+                    <p class="hidden-sm-and-down icon-text white--text">{{ icon.name }}</p>
                   </v-btn>
                   <v-spacer></v-spacer>
                 </v-row>
               </v-col>
             </v-row>
-          </v-container>
+          </v-card>
         </v-col>
         <v-col cols="6">
           <v-container>
-            <v-row class="white--text title" justify="center">Contact</v-row>
             <v-row justify="center">
-              Email:-
-              <a href="mailto:suraj@ecodrives.in" class="white--text">suraj@ecodrives.in</a>
-            </v-row>
-            <v-row justify="center">
-              Phone No:-
-              <a href="tel:8867208322" class="white--text">8867208322</a>
+              <v-card flat color="secondary">
+                <v-card-title class="justify-center white--text title">Contact</v-card-title>
+                <div class="white--text">
+                  Email:-
+                  <a href="mailto:suraj@ecodrives.in" class="white--text">suraj@ecodrives.in</a>
+                </div>
+                <div class="white--text">
+                  Phone No:-
+                  <a href="tel:8867208322" class="white--text">8867208322</a>
+                </div>
+              </v-card>
             </v-row>
           </v-container>
         </v-col>

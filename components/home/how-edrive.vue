@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-row>
         <v-col>
-          <span class="display-1 sec-head white--text">How E Drives</span>
+          <span class="display-1 sec-head white--text">How to Book</span>
         </v-col>
       </v-row>
     </v-container>

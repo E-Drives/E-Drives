@@ -5,9 +5,11 @@
     </v-content>
     <v-navigation-drawer right temporary fixed v-model="drawer">
       <v-list>
-        <v-list-item v-for="item in menu" :key="item.icon">
-          <v-list-item-action-text>{{ item.title }}</v-list-item-action-text>
-        </v-list-item>
+        <template v-for="item in menu">
+          <v-list-item :key="item.icon" :to="item.to">
+            <v-list-item-action-text>{{ item.title }}</v-list-item-action-text>
+          </v-list-item>
+        </template>
       </v-list>
     </v-navigation-drawer>
   </v-app>
