@@ -1,6 +1,5 @@
 <template>
   <div>
-    <AppBar></AppBar>
     <EdriveIntro></EdriveIntro>
     <WhyEdrive></WhyEdrive>
     <HowEdrive></HowEdrive>
@@ -14,7 +13,6 @@
 </style>
 
 <script>
-import AppBar from "~/components/home/appbar";
 import EdriveIntro from "~/components/home/edrive-intro";
 import WhyEdrive from "~/components/home/why-edrive";
 import HowEdrive from "~/components/home/how-edrive";
@@ -24,7 +22,6 @@ import EdriveFooter from "~/components/home/edrive-footer";
 
 export default {
   components: {
-    AppBar,
     EdriveIntro,
     WhyEdrive,
     HowEdrive,

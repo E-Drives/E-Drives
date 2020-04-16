@@ -1,5 +1,6 @@
 <template>
   <v-app dark>
+    <AppBar></AppBar>
     <v-content>
       <nuxt />
     </v-content>
@@ -16,7 +17,12 @@
 </template>
 
 <script>
+import AppBar from "~/components/home/appbar";
+
 export default {
+  components: {
+    AppBar
+  },
   computed: {
     drawer: {
       get() {
@@ -32,7 +38,7 @@ export default {
       menu: [
         { icon: "Home", title: "Home", to: "#intro" },
         { icon: "Why E Drives", title: "Why E Drives", to: "#whyedrives" },
-        { icon: "How Edrives", title: "How Edrives", to: "#howedrives" },
+        { icon: "How To Book", title: "How To Book", to: "#howedrives" },
         { icon: "Contact Us", title: "Contact Us", to: "#contactus" }
       ]
     };
