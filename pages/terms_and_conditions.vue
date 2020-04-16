@@ -22,7 +22,7 @@
                           <p
                             v-for="(lastpoint, index) in supersubitem.supersubpoints"
                             :key="index"
-                          >{{lastpoint}}</p>
+                          >• {{lastpoint}}</p>
                         </v-container>
                       </template>
                     </v-col>
@@ -36,6 +36,17 @@
     </v-row>
   </v-container>
 </template>
+
+<style scoped>
+p {
+  margin: 0;
+}
+
+.col {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+</style>
 
 <script>
 export default {

@@ -29,10 +29,14 @@ export default {
     return {
       drawer: false,
       menu: [
-        { icon: "Home", title: "Home", to: "#intro" },
-        { icon: "Why E Drives", title: "Why E Drives", to: "#whyedrives" },
-        { icon: "How To Book", title: "How To Book", to: "#howedrives" },
-        { icon: "Contact Us", title: "Contact Us", to: "#contactus" }
+        {
+          icon: "Home",
+          title: "Home",
+          to: `/#intro`
+        },
+        { icon: "Why E Drives", title: "Why E Drives", to: `/#whyedrives` },
+        { icon: "How To Book", title: "How To Book", to: `/#howedrives` },
+        { icon: "Contact Us", title: "Contact Us", to: `/#contactus` }
       ]
     };
   },
