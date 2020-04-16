@@ -1,3 +1,42 @@
+<template>
+  <v-container>
+    <v-row>
+      <v-col>
+        <h1 class="secondary--text">Terms and Conditions</h1>
+      </v-col>
+    </v-row>
+    <v-row v-for="(item) in items" :key="item.title">
+      <v-col>
+        <p>{{ item.title }}</p>
+        <v-container fluid>
+          <v-row v-for="(subitem) in item.points" :key="subitem.title">
+            <v-col>
+              <p>{{ subitem.title }}</p>
+              <template v-if="subitem.subpoints">
+                <v-container container>
+                  <v-row v-for="(supersubitem) in subitem.subpoints" :key="supersubitem.title">
+                    <v-col>
+                      <p>{{ supersubitem.title }}</p>
+                      <template v-if="supersubitem.supersubpoints">
+                        <v-container fluid>
+                          <p
+                            v-for="(lastpoint, index) in supersubitem.supersubpoints"
+                            :key="index"
+                          >{{lastpoint}}</p>
+                        </v-container>
+                      </template>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </template>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
 <script>
 export default {
   data: () => ({
@@ -301,7 +340,7 @@ export default {
           },
           {
             title:
-              "(13.2) If it is determined that losses will exceed the user’s coverage as provided by E Drives, the user will be responsible for excess charges E Drives does not take responsibility of theft or damage to the user’s or any third party’s belongings. In case of annulment of the Insurance policy due to user&#39;s negligence, rash driving or any such incident, user has to pay the repair cost of the vehicle."
+              "(13.2) If it is determined that losses will exceed the user’s coverage as provided by E Drives, the user will be responsible for excess charges E Drives does not take responsibility of theft or damage to the user’s or any third party’s belongings. In case of annulment of the Insurance policy due to user's negligence, rash driving or any such incident, user has to pay the repair cost of the vehicle."
           },
           {
             title:
@@ -356,7 +395,109 @@ export default {
       {
         title: "(18) PENALTY",
         points: [
-          
+          {
+            title:
+              "(18.1) If a customer is found drunk at the time of drop , Rs.1000/- fine will be levied along with the damage cost. Also, the customer will be liable for the complete damage repair cost."
+          },
+          {
+            title:
+              "(18.2) Customers are required to drop the vehicle at the drop location chosen at the time of booking. Failing to do so, he will be fined Rs.200/-. Additionally, overtime charges will be fined if another booking coincides with the booking."
+          },
+          {
+            title:
+              "(18.3) Smoking is strictly prohibited in and around the vehicle. Penalty of Rs.1000/- fine will be charged,if found guilty."
+          },
+          {
+            title:
+              "(18.4) In the case of further delay, Overtime charges would be calculated as Late Hours X Double the Hourly Charges."
+          },
+          {
+            title:
+              "(18.5) E Drives shall bear no penalty imposed on the vehicle due to negligent driving on part of the user."
+          },
+          {
+            title:
+              "(18.6) Parking challans, if any will have to be borne by the user."
+          },
+          {
+            title:
+              "(18.7) In the event of battery, motor or other damage , the customer will be liable to pay for the damage cost (as applicable)."
+          },
+          {
+            title:
+              "(18.8) In the event of any traffic rule violation or parking fine, the member must inform E Drives immediately. E Drives may ask for a copy of the challan in such an event."
+          },
+          {
+            title:
+              "(18.9) If the user damages or misplaces any attachment or accessory provided with the vehicle, E Drives reserves the right to charge the appropriate amount from the user."
+          },
+          {
+            title:
+              "(18.10) If the user has incurred any dues over and above that of the initial booking amount when dropping off the vehicle at the drop off site location and is unable to settle the dues at that time, then the user will have to sign a declaration provided by us promising to settle the dues and leave the original documents of license, government ID, etc. as surety. The documents can be collected by the user from the site location once dues have been settled."
+          },
+          {
+            title:
+              "(18.11) In the event of user having any penalties/dues outstanding with E Drives, E Drives reserves the right to charge reminder fees and default interest. E Drives also reserves the right to utilize third parties for the recovery of dues from a user."
+          },
+          {
+            title:
+              "(18.12) E Drives reserves the right to prohibit a user from booking any rides until all dues associated with the user account have been paid to E Drives in full."
+          },
+          {
+            title:
+              "(18.13) The user would be charged with a penalty in case any accessory such as tools or documents, belonging to E Drives is found missing during the end ride."
+          }
+        ]
+      },
+      {
+        title: "(19) DISPUTE MANAGEMENT",
+        points: [
+          {
+            title:
+              "(19.1) In case of dispute raised by a user, the E Drives confirms if the user has used the service. If the service was not used, we track the payment with our payment partner and a full refund is initiated. If the payment is not captured at our end, we contact the payment partner to process the full refund for the user."
+          },
+          {
+            title:
+              "(19.2) E Drives reserves the right to change the terms and conditions mentioned herewith. Notice of such changes will be intimated to the user in a timely manner. Such intimation shall be considered discharged when available and accessible from our E Drives website or mobile application. Such intimation will be provided via email or sms to the most recent email address /mobile numer provided on the User's profile, subsequent to article 1.3."
+          }
+        ]
+      },
+      {
+        title: "(20) AADHAR E-SIGN",
+        points: [
+          {
+            title:
+              "(20.1) By submitting Aadhaar number to E Drives India, you hereby authorize E Drives to collect, encrypt ,store and authenticate your Aadhaar number and demographic details (Information) against UIDAI database by itself or via NSDL e-governance Infra Ltd, an Authentication User Agency duly licensed by UIDAI via Digio.in before updating your account."
+          },
+          {
+            title:
+              "(20.2) E Drives will use your aadhar number to verify your identity and to collect e-signs against the SLA documentations."
+          },
+          {
+            title:
+              "(20.3) E Drives may use your demographic and biometric/OTP (Or any similar authentication mechanism) information for the purpose of Aadhar based authentication/e-KYC and e-sign."
+          },
+          {
+            title:
+              "(20.4) E Drives may share the Aadhaar data with government law enforcement agenrices in case of any legal case/theft etc."
+          },
+          {
+            title:
+              "(20.5) E Drives stores your aadhar verified details in encrypted form and in no manner has the access to your real aadhar number. Only you can see your aadhaar number in your profile."
+          }
+        ]
+      },
+      {
+        title: "(21) ACTIVA/CLIQ BOOKINGS OF DURATION MORE THAN 7 DAYS",
+        points: [
+          {
+            title:
+              "(21.1) If a vehicle is due for service during the booking period, we recommend the users to drop the vehicle for the servicing"
+          },
+          {
+            title:
+              "(21.2) We will not reimburse any costs for parts changed during servicing without our consent."
+          }
         ]
       }
     ]
