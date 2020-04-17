@@ -136,6 +136,9 @@
         </v-row>
       </v-container>
     </v-container>
+    <v-container>
+      <v-row justify="center" class="white--text">&copy; {{ new Date().getFullYear() }} E Drives</v-row>
+    </v-container>
   </v-footer>
 </template>
 

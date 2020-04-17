@@ -15,7 +15,7 @@ export default {
           "E Drives is a website to introduce a team of riders, designers, dreamers and doers. We might have different job titles, but we are reunited by one goal: to help delivery partners do their deliveries in style and save some money."
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
   },
   /*
    ** Customize the progress-bar color
