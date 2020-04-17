@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="secondary" fixed app>
+  <v-app-bar color="secondary" fixed app hide-on-scroll>
     <v-toolbar-title>
       <v-img :src="require('@/assets/logo/edrive_logo.png')" width="45" height="45" contain></v-img>
     </v-toolbar-title>
