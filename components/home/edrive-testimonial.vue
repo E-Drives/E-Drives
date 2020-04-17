@@ -65,7 +65,7 @@
 }
 
 .text-body {
-  width: 300px;
+  width: 225px;
 }
 
 .text-body-sm {

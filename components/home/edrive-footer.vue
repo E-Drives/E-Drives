@@ -1,50 +1,141 @@
 <template>
   <v-footer color="secondary" id="contactus">
-    <v-container fluid>
-      <v-row>
-        <v-col cols="6">
+    <v-container fluid class="hidden-xs-only">
+      <v-row justify="space-around">
+        <v-cols sm="4">
           <v-card flat color="secondary">
             <v-card-title class="justify-center white--text title">Connect Via</v-card-title>
-            <v-row>
-              <v-col v-for="icon in icons" :key="icon.name">
-                <v-row>
-                  <v-spacer></v-spacer>
-                  <v-btn text :href="icon.link" target="_blank">
-                    <img :src="getImage(icon.src)" width="24" height="24" :class="icon.class" />
-                    <p class="hidden-sm-and-down icon-text white--text">{{ icon.name }}</p>
-                  </v-btn>
-                  <v-spacer></v-spacer>
-                </v-row>
-              </v-col>
+            <v-row v-for="icon in icons" :key="icon.name">
+              <v-btn text :href="icon.link" target="_blank">
+                <img :src="getImage(icon.src)" width="24" height="24" :class="icon.class" />
+                <p class="icon-text white--text">{{ icon.name }}</p>
+              </v-btn>
             </v-row>
           </v-card>
-        </v-col>
-        <v-col cols="6">
-          <v-container>
-            <v-row justify="center">
-              <v-card flat color="secondary">
-                <v-card-title class="justify-center white--text title">Contact</v-card-title>
-                <div class="white--text">
-                  Email:-
-                  <a href="mailto:suraj@ecodrives.in" class="white--text">suraj@ecodrives.in</a>
-                </div>
-                <div class="white--text">
-                  Phone No:-
-                  <a href="tel:8867208322" class="white--text">8867208322</a>
-                </div>
-              </v-card>
+        </v-cols>
+        <v-cols sm="4">
+          <v-card flat color="secondary">
+            <v-card-title class="justify-center white--text title">E Drives Details</v-card-title>
+            <v-row v-for="item in items" :key="item.title" justify="center">
+              <v-btn text :href="item.href">
+                <span class="white--text">{{ item.title }}</span>
+              </v-btn>
             </v-row>
-          </v-container>
-        </v-col>
+          </v-card>
+        </v-cols>
+        <v-cols sm="4">
+          <v-card flat color="secondary">
+            <v-card-title class="justify-center white--text title">Contact</v-card-title>
+            <v-row>
+              <v-btn text>
+                Email:-&nbsp;
+                <a
+                  href="mailto:suraj@ecodrives.in"
+                  class="white--text"
+                >suraj@ecodrives.in</a>
+              </v-btn>
+            </v-row>
+            <v-row>
+              <v-btn text>
+                Phone No:-&nbsp;
+                <a href="tel:8867208322" class="white--text">8867208322</a>
+              </v-btn>
+            </v-row>
+            <v-row>
+              <v-container>
+                <v-row justify="center">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.ecodrives.ecodrive"
+                    target="_blank"
+                    text
+                  >
+                    <v-img
+                      :src="require('@/assets/intro/google-play-badge.png')"
+                      width="200"
+                      height="60"
+                    ></v-img>
+                  </a>
+                </v-row>
+              </v-container>
+            </v-row>
+          </v-card>
+        </v-cols>
       </v-row>
     </v-container>
-    <!-- <v-row>
-      <v-col cols="3" v-for="item in items" :key="item.title">
-        <v-card flat color="primary">
-          <v-card-text class="text-center">{{ item.title }}</v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>-->
+    <v-container fluid class="hidden-sm-and-up">
+      <v-container fluid>
+        <v-row justify="center">
+          <v-cols>
+            <v-card flat color="secondary">
+              <v-card-title class="justify-center white--text title">Contact</v-card-title>
+              <v-row>
+                <v-btn text>
+                  Email:-&nbsp;
+                  <a
+                    href="mailto:suraj@ecodrives.in"
+                    class="white--text"
+                  >suraj@ecodrives.in</a>
+                </v-btn>
+              </v-row>
+              <v-row>
+                <v-btn text>
+                  Phone No:-&nbsp;
+                  <a href="tel:8867208322" class="white--text">8867208322</a>
+                </v-btn>
+              </v-row>
+              <v-row>
+                <v-container>
+                  <v-row justify="center">
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.ecodrives.ecodrive"
+                      target="_blank"
+                      text
+                    >
+                      <v-img
+                        :src="require('@/assets/intro/google-play-badge.png')"
+                        width="200"
+                        height="60"
+                      ></v-img>
+                    </a>
+                  </v-row>
+                </v-container>
+              </v-row>
+            </v-card>
+          </v-cols>
+        </v-row>
+      </v-container>
+      <div style="height: 25px"></div>
+      <v-container fluid>
+        <v-row justify="center">
+          <span class="white--text">Connect Via</span>
+        </v-row>
+        <v-row justify="space-around">
+          <v-btn
+            large
+            text
+            class="white--text"
+            v-for="icon in icons"
+            :key="icon.name"
+            :href="icon.link"
+          >
+            <img :src="getImage(icon.src)" width="24" height="24" :class="icon.class" />
+          </v-btn>
+        </v-row>
+      </v-container>
+      <div style="height: 25px"></div>
+      <v-container fluid>
+        <v-row justify="center">
+          <v-btn
+            x-small
+            text
+            class="white--text"
+            v-for="item in items"
+            :key="item.title"
+            :href="item.href"
+          >{{ item.title }}</v-btn>
+        </v-row>
+      </v-container>
+    </v-container>
   </v-footer>
 </template>
 
@@ -85,16 +176,16 @@ export default {
   data: () => ({
     items: [
       {
-        title: "About"
+        title: "Terms & Conditions",
+        href: "/terms_and_conditions"
       },
       {
-        title: "Terms & Conditions"
+        title: "Privacy Policy",
+        href: "/privacy_policy"
       },
       {
-        title: "Privacy Policy"
-      },
-      {
-        title: "FAQ"
+        title: "FAQ",
+        href: "faq"
       }
     ],
     icons: [
