@@ -211,7 +211,7 @@ export default {
       {
         name: "Instagram",
         src: "instagram-logo.png",
-        link: " https://www.instagram.com/ecodrives.in/"
+        link: " https://www.instagram.com/edrives.in/"
       },
       {
         name: "Youtube",
